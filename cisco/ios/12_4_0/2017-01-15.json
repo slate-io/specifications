@@ -1,0 +1,63 @@
+{
+  "slate": "0.1.0",
+  "info": {
+    "title": "Cisco IOS",
+    "description": "A family of software used on most Cisco Systems routers and current Cisco network switches.",
+    "version": "12.4.0"
+  },
+  "paths": {
+    "show ip interface": {
+      "get": {
+        "summary": "Router Interfaces",
+        "description": "The show ip interface brief command can be used to view a summary of the router interfaces. This command displays the IP address, interface status, and additional information.",
+        "parameters": [
+          {
+            "name": "brief",
+            "description": "Displays a summary of the usability status information for each interface.",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "An array of interfaces",
+            "schema": {
+              "$ref": "#/definitions/Interface"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Interface": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Type of interface."
+        },
+        "ip_address": {
+          "type": "string",
+          "description": "IP address assigned to the interface."
+        },
+        "valid": {
+          "type": "boolean",
+          "description": "Yes signifies that the IP address is currently valid. No signifies that the IP address is not currently valid."
+        },
+        "method": {
+          "type": "string",
+          "description": ""
+        },
+        "status": {
+          "type": "string",
+          "description": "Indicates the status of interface."
+        },
+        "protocol": {
+          "type": "string",
+          "description": "Indicates the operational status of the routing protocol on this interface."
+        }
+      }
+    }
+  }
+}
