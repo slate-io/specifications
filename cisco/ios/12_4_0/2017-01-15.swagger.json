@@ -1,12 +1,12 @@
 {
-  "slate": "0.1.0",
+  "swagger": "2.0",
   "info": {
     "title": "Cisco IOS",
     "description": "A family of software used on most Cisco Systems routers and current Cisco network switches.",
     "version": "12.4.0"
   },
   "paths": {
-    "show ip interface": {
+    "/show ip interface": {
       "get": {
         "summary": "Router Interfaces",
         "description": "The show ip interface brief command can be used to view a summary of the router interfaces. This command displays the IP address, interface status, and additional information.",
@@ -14,6 +14,7 @@
           {
             "name": "brief",
             "description": "Displays a summary of the usability status information for each interface.",
+            "in": "query",
             "required": false,
             "type": "string"
           }
