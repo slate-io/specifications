@@ -24,7 +24,7 @@
             "description": "An array of interfaces",
             "schema": {
               "$ref": "#/definitions/Interface",
-              "pattern": "(?im)^([A-Za-z]+(?:[0-9]\/[0-9]))\\s+((?:[0-9]{1,3}\.){3}[0-9]{1,3}|unassigned)\\s+(yes|no)\s+([A-Za-z]+)\\s+(up|down|administratively down)\\s+([A-Za-z]+)$",
+              "pattern": "(?im)^([A-Za-z]+(?:[0-9]\/[0-9]))\\s+((?:[0-9]{1,3}\\.){3}[0-9]{1,3}|unassigned)\\s+(yes|no)\\s+([A-Za-z]+)\\s+(up|down|administratively down)\\s+([A-Za-z]+)$",
               "type": "array"
             }
           }
